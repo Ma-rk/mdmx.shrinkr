@@ -16,10 +16,17 @@ repositories {
 }
 
 dependencies {
-  implementation("org.springframework.boot:spring-boot-starter")
-  implementation("org.jetbrains.kotlin:kotlin-reflect")
-  implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-  testImplementation("org.springframework.boot:spring-boot-starter-test")
+  // https://spring.io/projects/spring-boot
+  implementation("org.springframework.boot:spring-boot-starter:2.6.2")
+
+  // https://kotlinlang.org/
+  implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.10")
+
+  // https://kotlinlang.org/
+  implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10")
+
+  // https://spring.io/projects/spring-boot
+  testImplementation("org.springframework.boot:spring-boot-starter-test:2.6.2")
 }
 
 tasks.withType<KotlinCompile> {
