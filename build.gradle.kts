@@ -30,6 +30,9 @@ dependencies {
 
   // https://github.com/MicroUtils/kotlin-logging
   implementation("io.github.microutils:kotlin-logging-jvm:2.1.20")
+
+  // https://spring.io/projects/spring-boot
+  implementation("org.springframework.boot:spring-boot-starter-web:2.6.2")
 }
 
 tasks.withType<KotlinCompile> {
