@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class ShrinkrApplication
 
 fun main(args: Array<String>) {
-	runApplication<ShrinkrApplication>(*args)
+  runApplication<ShrinkrApplication>(*args)
 }
