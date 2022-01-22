@@ -33,6 +33,10 @@ dependencies {
 
   // https://spring.io/projects/spring-boot
   implementation("org.springframework.boot:spring-boot-starter-web:2.6.2")
+
+  // https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
+  implementation("io.springfox:springfox-boot-starter:3.0.0")
+  implementation("io.springfox:springfox-swagger-ui:2.9.2")
 }
 
 tasks.withType<KotlinCompile> {
