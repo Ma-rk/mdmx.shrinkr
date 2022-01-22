@@ -43,6 +43,9 @@ dependencies {
 
   // https://spring.io/projects/spring-data-jpa
   implementation("org.springframework.boot:spring-boot-starter-data-jpa:2.6.2")
+
+  // https://hashids.org/java/
+  implementation("org.hashids:hashids:1.0.3")
 }
 
 tasks.withType<KotlinCompile> {
