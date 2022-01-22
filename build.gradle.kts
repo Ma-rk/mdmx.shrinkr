@@ -40,6 +40,9 @@ dependencies {
 
   // https://dev.mysql.com/doc/connector-j/8.0/en/
   runtimeOnly("mysql:mysql-connector-java:8.0.25")
+
+  // https://spring.io/projects/spring-data-jpa
+  implementation("org.springframework.boot:spring-boot-starter-data-jpa:2.6.2")
 }
 
 tasks.withType<KotlinCompile> {
