@@ -2,3 +2,7 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant-path-matcher
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
