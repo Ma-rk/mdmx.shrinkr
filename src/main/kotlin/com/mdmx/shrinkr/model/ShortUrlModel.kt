@@ -18,16 +18,16 @@ class ShortUrlModel(
   val insertedAt: LocalDateTime = LocalDateTime.now()
 
   @Column(length = 7, nullable = true, insertable = false, unique = true)
-  val shortUrl: String? = null
+  var shortUrl: String? = null
 
   @Column(length = 7, nullable = true, insertable = false, unique = true)
-  val paddedShortUrl: String? = null
+  var paddedShortUrl: String? = null
 
   @Column(nullable = true, insertable = false)
-  val creatorEmailAddr: String? = null
+  var creatorEmailAddr: String? = null
 
   @Column(nullable = true, insertable = false, unique = true)
-  val deactivationCode: String? = null
+  var deactivationCode: String? = null
 
   @Column(nullable = true, insertable = false)
   val deactivateAt: LocalDateTime? = null
