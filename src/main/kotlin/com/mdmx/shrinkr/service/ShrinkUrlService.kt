@@ -4,6 +4,7 @@ import com.mdmx.shrinkr.ety.req.ShrinkUrlReqEty
 import com.mdmx.shrinkr.model.ShortUrlModel
 import com.mdmx.shrinkr.repository.ShortUrlRepository
 import com.mdmx.shrinkr.util.addPaddingCharacter
+import com.mdmx.shrinkr.util.getRandomString
 import mu.KLogger
 import mu.KotlinLogging
 import org.hashids.Hashids
@@ -27,6 +28,11 @@ class ShrinkUrlService(
 
     shortUrlModel.shortUrl = hashedUrl
     shortUrlModel.paddedShortUrl = paddedUrl
+
+    if (shrinkUrlReqEty.deletionLinkChecked) {
+      shortUrlModel.creatorEmailAddr = shrinkUrlReqEty.emailAddr
+      shortUrlModel.deactivationCode = getRandomString(178)
+    }
 
     shortUrlRepository.save(shortUrlModel)
 
