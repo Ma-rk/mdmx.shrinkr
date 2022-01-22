@@ -6,3 +6,18 @@ spring:
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+
+mysql:
+  url:
+    local: "jdbc:mysql://localhost:3306/mdmx?serverTimezone=Asia/Seoul&characterEncoding=UTF-8"
+  username:
+    local: "root"
+  password:
+    local: "88888888"
+
+jpa:
+  show_sql:
+    local: true
+  ddl-auto:
+    local: create # create create-drop update validate none
