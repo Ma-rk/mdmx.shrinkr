@@ -37,6 +37,9 @@ dependencies {
   // https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
   implementation("io.springfox:springfox-boot-starter:3.0.0")
   implementation("io.springfox:springfox-swagger-ui:2.9.2")
+
+  // https://dev.mysql.com/doc/connector-j/8.0/en/
+  runtimeOnly("mysql:mysql-connector-java:8.0.25")
 }
 
 tasks.withType<KotlinCompile> {
