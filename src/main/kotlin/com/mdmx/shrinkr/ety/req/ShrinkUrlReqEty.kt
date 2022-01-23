@@ -13,5 +13,5 @@ class ShrinkUrlReqEty(
   val deletionLinkChecked: Boolean,
 
   @ApiModelProperty(required = false, notes = "단축 url 삭제를 위한 링크를 받을 email 주소", example = "kim.mark.dev@gmail.com")
-  val emailAddr: String
+  val emailAddr: String?
 )
