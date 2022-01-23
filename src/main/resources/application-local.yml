@@ -8,7 +8,14 @@ spring:
     properties:
       hibernate:
         show_sql: ${jpa.show_sql.local}
+        format_sql: ${jpa.format_sql.local}
     hibernate:
       ddl-auto: ${jpa.ddl-auto.local}
 
-
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: ${jpa.show_param.local}

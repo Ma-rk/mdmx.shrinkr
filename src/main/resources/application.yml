@@ -6,6 +6,9 @@ spring:
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  output:
+    ansi:
+      enabled: always
 
 
 mysql:
@@ -19,5 +22,9 @@ mysql:
 jpa:
   show_sql:
     local: true
+  format_sql:
+    local: true
+  show_param:
+    local: trace
   ddl-auto:
-    local: create # create create-drop update validate none
+    local: none # create create-drop update validate none
