@@ -5,6 +5,11 @@ plugins {
   id("io.spring.dependency-management") version "1.0.11.RELEASE"
   kotlin("jvm") version "1.6.10"
   kotlin("plugin.spring") version "1.6.10"
+
+  // https://velog.io/@conatuseus/작성중Kotlin-JPA를-사용하며-만난-문제
+  // https://plugins.gradle.org/plugin/org.jetbrains.kotlin.plugin.jpa
+  // 모델 클래스에 기본 생성자를 추가하기 위해 사용
+  kotlin("plugin.jpa") version "1.3.72"
 }
 
 group = "com.mdmx"
