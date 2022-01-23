@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiModelProperty
 /**
  * url 단축 리퀘스트 바디를 담기 위한 entity
  */
-class ShrinkUrlReqEty(
+data class ShrinkUrlReqEty(
   @ApiModelProperty(required = true, notes = "단축 대상 url", example = "https://github.com/Ma-rk/")
   val urlToShrink: String,
 
