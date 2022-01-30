@@ -30,5 +30,5 @@ class ShortUrlModel(
   var deactivationCode: String? = null
 
   @Column(nullable = true, insertable = false)
-  val deactivateAt: LocalDateTime? = null
+  var deactivatedAt: LocalDateTime? = null
 }
