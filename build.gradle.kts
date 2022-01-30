@@ -10,6 +10,11 @@ plugins {
   // https://plugins.gradle.org/plugin/org.jetbrains.kotlin.plugin.jpa
   // 모델 클래스에 기본 생성자를 추가하기 위해 사용
   kotlin("plugin.jpa") version "1.3.72"
+
+  // https://www.bsidesoft.com/7871
+  // https://github.com/GoogleContainerTools/jib
+  // jib 빌드로 도커 이미지를 생성하는 플러그인을 추가하기 위해 사용
+  id("com.google.cloud.tools.jib") version "3.2.0"
 }
 
 group = "com.mdmx"
@@ -62,4 +67,17 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
   useJUnitPlatform()
+}
+
+jib {
+  from {
+    image = "openjdk:17-alpine"
+  }
+  to {
+    image = "shirinkr"
+    tags = setOf("0.0.1")
+  }
+  container {
+    jvmFlags = listOf("-Xms128m", "-Xmx128m", "-Dspring.profiles.active=prod")
+  }
 }
