@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>mdmx: Link shortener</title>
+</head>
+<body>
+<div>
+
+    <label for="originalLink">짧게 줄일 Link 를 넣으세요:</label>
+    <input type="text" id="originalLink" name="originalLink" required
+           minlength="4" maxlength="500" size="100">
+</div>
+<div>
+    <label for="emailAddr">단축주소 삭제 링크를 받을 email 주소를 입력하세요(선택):</label>
+    <input type="email" id="emailAddr" name="emailAddr" required
+           minlength="4" maxlength="500" size="40">
+</div>
+</body>
+</html>
