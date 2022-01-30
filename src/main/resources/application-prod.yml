@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${mysql.url.prod}
+    username: ${mysql.username.prod}
+    password: ${mysql.password.prod}
+  jpa:
+    properties:
+      hibernate:
+        show_sql: ${jpa.show_sql.prod}
+        format_sql: ${jpa.format_sql.prod}
+    hibernate:
+      ddl-auto: ${jpa.ddl-auto.prod}
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: ${jpa.show_param.prod}
